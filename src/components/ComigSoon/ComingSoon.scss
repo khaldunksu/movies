@@ -1,0 +1,105 @@
+p {
+  margin: 0;
+  padding: 0;
+}
+.container_filter {
+  height: 63px;
+  width: 100%;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.heading {
+  color: white;
+  font-size: 29px;
+  font-family: "Roboto";
+  font-weight: bold;
+}
+
+.filter {
+  margin-left: 375px;
+  &_button {
+    border: 1.5px solid white;
+    color: white;
+    background-color: black;
+    border-radius: 10px;
+    width: 134px;
+    height: 37px;
+    font-family: "Roboto";
+    font-size: 21px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-right: 25px;
+    &:hover {
+      background-color: white;
+      color: black;
+    }
+  }
+  &_img {
+    height: 20px;
+    width: 50px;
+    margin-right: 20px;
+  }
+}
+
+.slider {
+  display: flex;
+  margin: 0;
+}
+
+.poster {
+  margin-top: 23px; 
+  margin-bottom: 20px;
+}
+
+.atribute {
+  width: 20px;
+  height: 20px;
+  margin-right: 43px;
+  margin-top: 15px;
+}
+
+.rank {
+  display: flex;
+}
+
+.rank_number {
+  display: flex;
+  justify-content: center;
+}
+
+.number {
+  font-size: 14px;
+  font-weight: bold;
+  margin-top: 10px;
+  margin-left: 55px;
+}
+.rank_img {
+display: flex;
+justify-content: center;
+}
+
+.title {
+  font-size: 20px;
+  font-family: "Roboto";
+  color: rgb(1, 11, 19);
+  font-weight: bold;
+  line-height: 1.2;
+  text-align: left;
+}
+
+.photo {
+  width:220px;
+  height:332px;
+  margin-top:15px;
+  position: relative;
+  &::after {
+    width: 450px;
+    height: 300px;
+    left: 0;
+    position: absolute;
+    content: url('./movieicon.png');
+  }
+}

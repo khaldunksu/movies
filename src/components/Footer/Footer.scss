@@ -1,0 +1,35 @@
+.footer {
+    background-color: #010b13;
+    width: 100%;
+    &_content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    &_heading {
+        font-size: 28px;
+        color: #ffffff;
+        font-family: "Roboto Condensed";
+        font-weight: 700;
+        font-style: italic;
+        margin-bottom: 15px;
+        margin-top: 35px;
+        
+    }
+    &_text1 {
+        font-size: 25px;
+        color: #ffffff;
+        font-family: "Roboto Condensed";
+        font-weight: 400;
+        font-style: italic;
+        margin-bottom: 20px;
+        margin-top: 0;
+    }
+    &_text2 {
+        font-size: 18px;
+        color: #ffffff;
+        font-family: "Roboto Condensed";
+        font-weight: 400;
+        font-style: italic;
+    }
+}

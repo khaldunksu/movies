@@ -1,0 +1,103 @@
+.header {
+  color: white;
+  background-color: #389ef2;
+  height: 60px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &_logo {
+    width: 25px;
+    height: 33px;
+    margin-right: 10px;
+    margin-left: 73px;
+  }
+  &_title {
+    font-size: 25px;
+    font-family: "Roboto Condensed";
+    font-weight: bold;
+    font-style: italic;
+    line-height: 1.2;
+    position: relative;
+    &::after {
+      position: absolute;
+      right: -10px;
+      content: "";
+      background-color: rgb(255, 193, 7);
+      width: 2px;
+      height: 42px;
+    }
+  }
+  &_text {
+    margin-left: 25px;
+    font-size: 14px;
+    font-family: "Roboto Condensed";
+    color: rgb(254, 254, 254);
+    font-weight: 500;
+    line-height: 1.2;
+  }
+  &_nav {
+    margin-left: 110px;
+  }
+  &_links {
+    display: flex;
+    font-size: 24px;
+    font-family: "Roboto Condensed";
+    color: rgb(254, 254, 254);
+    font-weight: bold;
+    line-height: 1.2;
+    &_item {
+      margin-right: 50px;
+      margin-left: 50px;
+    }
+  }
+}
+
+.signup {
+ position: relative;
+ &::before {
+   position: absolute;
+   width: 24px;
+   height: 18px;
+   left: -34px;
+   content: url("./Signup_logo.png");
+ }
+}
+.login {
+  position: relative;
+  &::before {
+    position: absolute;
+    width: 36px;
+    height: 36px;
+    bottom: -4px;
+    left: -50px;
+    content: url("./logIn.png");
+  }
+ }
+
+ .about {
+  position: relative;
+  color: rgba(255, 255, 255, 0.6);
+  &::before {
+    position: absolute;
+    width: 28px;
+    height: 23px;
+    left: -40px;
+    content: url("./about.png");
+  }
+ }
+
+li {
+  list-style-type: none;
+}
+
+ul {
+  margin-left: 0;
+  padding-left: 0;
+}
+
+a {
+  margin: 0;
+  color: white;
+  text-decoration: none;
+}
