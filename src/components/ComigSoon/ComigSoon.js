@@ -9,7 +9,13 @@ import heart from "../ComigSoon/Like_Follow.png";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-
+const   settings = {
+  dots: false,
+  infinite: true,
+  speed: 500,
+  slidesToShow: null,
+  slidesToScroll: 2
+};
 const URL = "https://api.myjson.com/bins/p2dnz";
 const getData = () => fetch(URL)
   .then(response => response.json());
@@ -56,13 +62,6 @@ class ComingSoon extends React.Component {
   render() {
     const { movies } = this.state;
     console.log(movies)
-    let settings = {
-      dots: false,
-      infinite: true,
-      speed: 500,
-      slidesToShow: movies.length<4?2:4,
-      slidesToScroll: 2
-    };
     return (
       <div className="container">
         <div className="container_filter">
@@ -84,7 +83,7 @@ class ComingSoon extends React.Component {
             <img src={list} alt="list view" className="filter_img" />
           </div>
         </div>
-
+        {settings.slidesToShow=movies.length<4?2:4}
         <Slider {...settings} className="slider">
           {movies.map(i => (
             <>
