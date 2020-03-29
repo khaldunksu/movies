@@ -10,13 +10,6 @@ import gradeless from "../../svg/products/actions/gradeless.svg"
 import share from "../../svg/products/actions/share.svg"
 import heart from "../ComigSoon/Like_Follow.png";
 
-const   settings = {
-  dots: false,
-  infinite: true,
-  speed: 500,
-  slidesToShow: null,
-  slidesToScroll: 2
-};
 const URL = "https://api.myjson.com/bins/p2dnz";
 const getData = () => fetch(URL)
   .then(response => response.json());
@@ -66,6 +59,13 @@ class ComingSoon extends React.Component {
   render() {
     const { movies } = this.state;
     console.log(movies)
+    const   settings = {
+      dots: false,
+      infinite: true,
+      speed: 500,
+      slidesToShow: movies.length<4?2:4,
+      slidesToScroll: 2
+    };
     return (
       <div className="container">
         <div className="container_filter">
@@ -87,10 +87,8 @@ class ComingSoon extends React.Component {
             <img src={list} alt="list view" className="filter_img" />
           </div>
         </div>
-        {settings.slidesToShow=movies.length<4?2:4}
         <Slider {...settings} className="slider">
           {movies.map(i => (
-            <>
               <div className="poster" key={i.id}>
                 <p className='title'>{i.title.length > 26 ? "Amile" : i.title}</p>
                 <p className='title'>{i.year}</p>
@@ -107,7 +105,7 @@ class ComingSoon extends React.Component {
                   <p><img src={heart} alt="likes" className="atribute" /></p>
                   </div>
               </div>
-            </>
+            
           ))}
           </Slider>
         
