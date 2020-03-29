@@ -12,7 +12,7 @@ const DataMovies = ({ movies }) => {
     <div>
       {movies.map(i => (
         <>
-          <div className="list">
+          <div className="list" key={i.id}>
             <div><img src={i.poster} alt="poster"className="movie_photo"></img></div>
             <div className="grade"><img src={grade} alt="gradeless" /></div>
             <div className="list_content">

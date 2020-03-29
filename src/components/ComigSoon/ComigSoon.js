@@ -1,14 +1,15 @@
 import React from 'react';
 import './ComingSoon.scss';
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import list from "../../svg/list-view.svg";
 import card from "../../svg/card-view.svg";
 import comment from "../../svg/products/actions/comment.svg"
 import gradeless from "../../svg/products/actions/gradeless.svg"
 import share from "../../svg/products/actions/share.svg"
 import heart from "../ComigSoon/Like_Follow.png";
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+
 const   settings = {
   dots: false,
   infinite: true,
@@ -21,9 +22,12 @@ const getData = () => fetch(URL)
   .then(response => response.json());
 
 class ComingSoon extends React.Component {
-  state = {
+  constructor(props) {
+    super(props);
+  this.state = {
     movies: [],
   }
+}
   componentDidMount() {
     getData()
       .then((movies) => {
@@ -87,7 +91,7 @@ class ComingSoon extends React.Component {
         <Slider {...settings} className="slider">
           {movies.map(i => (
             <>
-              <div className="poster">
+              <div className="poster" key={i.id}>
                 <p className='title'>{i.title.length > 26 ? "Amile" : i.title}</p>
                 <p className='title'>{i.year}</p>
                 <img src={i.poster} alt="poster"className="photo"></img>
