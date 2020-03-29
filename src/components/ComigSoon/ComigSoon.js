@@ -87,29 +87,29 @@ class ComingSoon extends React.Component {
             <img src={list} alt="list view" className="filter_img" />
           </div>
         </div>
-        <Slider {...settings} className="slider">
+        <Slider {...settings}>
           {movies.map(i => (
               <div className="poster" key={i.id}>
-                <p className='title'>{i.title.length > 26 ? "Amile" : i.title}</p>
-                <p className='title'>{i.year}</p>
-                <img src={i.poster} alt="poster"className="photo"></img>
+                <div><p className='title'>{i.title.length > 26 ? "Amile" : i.title}</p></div>
+                <div><p className='title'>{i.year}</p></div>
+                <div><img src={i.poster} alt="poster"className="photo"></img></div>
                   <div className='rank'>
-                  <p className="number">{i.comments_count}</p>
-                  <p className="number">{i.rank}</p>
-                  <p className="number">{i.likes_count}</p>
+                  <div><p className="number">{i.comments_count}</p></div>
+                  <div><p className="number">{i.rank}</p></div>
+                  <div><p className="number">{i.likes_count}</p></div>
                   </div>
                   <div className='rank'>
-                  <p><img src={share} alt="share" className="atribute" /></p>
-                  <p><img src={comment} alt="comment" className="atribute" /></p>
-                  <p><img src={gradeless} alt="gradeless" className="atribute" /></p>
-                  <p><img src={heart} alt="likes" className="atribute" /></p>
+                  <div><p><img src={share} alt="share" className="atribute" /></p></div>
+                  <div><p><img src={comment} alt="comment" className="atribute" /></p></div>
+                  <div><p><img src={gradeless} alt="gradeless" className="atribute" /></p></div>
+                  <div><p><img src={heart} alt="likes" className="atribute" /></p></div>
                   </div>
               </div>
             
           ))}
           </Slider>
-        
-      </div>
+          </div>
+   
     )
   }
 }
