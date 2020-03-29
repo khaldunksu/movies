@@ -1,13 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import comment from "../../svg/products/actions/comment.svg"
 import gradeless from "../../svg/products/actions/gradeless.svg"
 import share from "../../svg/products/actions/share.svg"
 import heart from "../ComigSoon/Like_Follow.png";
 import grade from "../../svg/grade.png"
 import Footer from "../Footer/Footer";
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 
 const DataMovies = ({ movies }) => {
  
@@ -16,8 +13,8 @@ const DataMovies = ({ movies }) => {
       {movies.map(i => (
         <>
           <div className="list">
-            <div><img src={i.poster} className="movie_photo"></img></div>
-            <div className="grade"><img src={grade}/></div>
+            <div><img src={i.poster} alt="poster"className="movie_photo"></img></div>
+            <div className="grade"><img src={grade} alt="gradeless" /></div>
             <div className="list_content">
               <p className='name'>{i.title.length > 26 ? "Amile" : i.title}</p>
               <p className='descrip'>{i.year}|Director:{i.director}|Writer:{i.writer}</p>

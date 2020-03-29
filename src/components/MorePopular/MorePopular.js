@@ -1,4 +1,4 @@
-import React, { useEffect,useState } from 'react';
+import React from 'react';
 import list from "../../svg/list-view.svg";
 import card from "../../svg/card-view.svg";
 import './MorePopular.scss';

@@ -56,7 +56,7 @@ class ComingSoon extends React.Component {
   render() {
     const { movies } = this.state;
     console.log(movies)
-    var settings = {
+    let settings = {
       dots: false,
       infinite: true,
       speed: 500,
@@ -91,7 +91,7 @@ class ComingSoon extends React.Component {
               <div className="poster">
                 <p className='title'>{i.title.length > 26 ? "Amile" : i.title}</p>
                 <p className='title'>{i.year}</p>
-                <img src={i.poster} className="photo"></img>
+                <img src={i.poster} alt="poster"className="photo"></img>
                   <div className='rank'>
                   <p className="number">{i.comments_count}</p>
                   <p className="number">{i.rank}</p>
